@@ -18,7 +18,7 @@ app.get("/news", async (req, res) => {
         try {
             const response = await axios.get("https://newsapi.org/v2/everything", {
                 params: {
-                    q: "karura forest",
+                    q: "forests in kenya",
                     apiKey: news_api_key,
                     language: "en",
                 },
@@ -42,12 +42,9 @@ app.get("/news", async (req, res) => {
 //graph api endpoint
 //create some dummy data for the graph
 const forestCoverTrend = [
-    { year: 2000, cover: 85 },
-    { year: 2005, cover: 80 },
-    { year: 2010, cover: 75 },
-    { year: 2015, cover: 72 },
-    { year: 2020, cover: 68 },
-    { year: 2024, cover: 65 }
+    { year: 2020, cover: 9.86 },
+    { year: 2023, cover: 9.92 },
+    { year: 2025, cover: 10.05 }
   ];
 
 app.get("/graph", (req, res) => {
